@@ -21,6 +21,8 @@ body {
     width: 100%;
     height: 100%;
     background: #141414;
+    background: url(../images/bg.jpg) 50% 50% no-repeat;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,4 +74,18 @@ body {
 
 .text:hover {
     transform: rotateX(35deg);
+}
+
+.text h1 .letter {
+    animation: hue 4s linear infinite;
+    animation-delay: calc(var(--i) * 0.75s);
+}
+
+@keyframes hue {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(360deg);
+    }
 }
